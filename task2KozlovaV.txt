@@ -1,0 +1,28 @@
+package task2;
+
+import java.util.Scanner;
+
+public class outputHelloV {
+    public static void main(String[] args) {
+        System.out.println("Введите имя");
+        Scanner in = new Scanner(System.in);
+        String enteredName=in.nextLine();
+        String ourName="Вячеслав";
+
+        String greeting=(ourName.equals(enteredName)) ? "Привет, Вячеслав" : "Нет такого имени";
+
+        //либо Вариант2:
+        /*
+        String greeting;
+         if (ourName.equals(enteredName)){
+            greeting="Привет, Вячеслав";
+        } else {
+            greeting="Нет такого имени";
+        }
+        */
+
+        System.out.println(greeting);
+
+
+    }
+}
