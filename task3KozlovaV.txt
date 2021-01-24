@@ -1,5 +1,6 @@
 package task3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class outputofMultiple {
@@ -8,13 +9,15 @@ public class outputofMultiple {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Введите длину массива");
-        int aSize=in.nextInt();
-        int array []= new int[aSize];
+        try {
+            int aSize = in.nextInt();
+            int array[] = new int[aSize];
 
-        System.out.println("Введите элементы массива");
-        for (int i=0; i<aSize; i++){
-            array [i] = in.nextInt();
-        }
+
+            System.out.println("Введите элементы числового массива");
+            for (int i = 0; i < aSize; i++) {
+                array[i] = in.nextInt();
+                 }
 
         System.out.println("Элементы массива кратные трем:");
         for (int i=0; i<aSize; i++){
@@ -23,7 +26,9 @@ public class outputofMultiple {
             }
         }
 
-
+        }catch (InputMismatchException excep){
+         System.out.println("Вводите цифры, не символы");
+        }
     }
 
 }

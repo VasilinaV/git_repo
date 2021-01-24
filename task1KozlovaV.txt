@@ -1,14 +1,20 @@
 package task1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class outputHello {
     public static void main(String[] args) {
         System.out.println("Введите число");
         Scanner in = new Scanner(System.in);
-        int number = in.nextInt();
-        if (number>7){
-            System.out.println("Привет");
+        try {
+            int number = in.nextInt();
+            if (number > 7) {
+                System.out.println("Привет");
+            }
+        }catch (InputMismatchException excep){
+            System.out.println("Вводите цифры, не символы");
+
         }
     }
 }
